@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
     nlevels = atoi(argv[1]);
   }
   if (nlevels > 8 || nlevels < 0) {
-    printf("print a triangle, no command-line argument should default to 3 levels\n");
+    printf("./triangle: the number of levels must be between 0 and 8.\n");
     return 1;
   }
   print_triangle(nlevels);
