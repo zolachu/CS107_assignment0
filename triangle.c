@@ -9,6 +9,7 @@
  */
 
 #include <stdio.h>
+#include<stdlib.h>
 
 // Define a C constant for the level number to use when not specified by the user
 #define DEFAULT_LEVELS 3
@@ -34,7 +35,10 @@ void print_triangle(int nlevels) {
 }
 
 int main(int argc, char *argv[]) {
-    int nlevels = DEFAULT_LEVELS;
-    print_triangle(nlevels);
+  //    int nlevels = DEFAULT_LEVELS;
+  if (argc != 2)
+    printf("error: wrong number of arguments");
+  int nlevels = atoi(argv[1]);
+  print_triangle(nlevels);
     return 0;
 }
