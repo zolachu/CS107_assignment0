@@ -41,9 +41,11 @@ int main(int argc, char *argv[]) {
     nlevels = atoi(argv[1]);
   }
   if (nlevels > 8 || nlevels < 0) {
-    printf("./triangle: the number of levels must be between 0 and 8.\n");
-       return 1;
+    // printf("./triangle: the number of levels must be between 0 and 8.\n");
+    // return 1;
     //    printf(1, "./triangle: the number of levels must be between 0 and 8.\n");
+       fprintf(stderr, "Division by zero! Exiting...\n");
+       exit(1);
   }
   print_triangle(nlevels);
     return 0;
