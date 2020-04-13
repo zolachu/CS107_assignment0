@@ -42,7 +42,8 @@ int main(int argc, char *argv[]) {
   }
   if (nlevels > 8 || nlevels < 0) {
     printf("./triangle: the number of levels must be between 0 and 8.\n");
-    return 1;
+       return 1;
+    //    printf(1, "./triangle: the number of levels must be between 0 and 8.\n");
   }
   print_triangle(nlevels);
     return 0;
