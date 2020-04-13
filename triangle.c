@@ -36,9 +36,17 @@ void print_triangle(int nlevels) {
 
 int main(int argc, char *argv[]) {
   //    int nlevels = DEFAULT_LEVELS;
-  if (argc != 2)
-    printf("error: wrong number of arguments");
+  if (argc != 2) {
+    printf("print a triangle, no command-line argument should default to 3 levels");
+    return 1;
+  }
+ 
   int nlevels = atoi(argv[1]);
+
+  if (nlevels <= 0) {
+    printf("print a triangle, no command-line argument should default to 3 levels\n");
+    return 1;
+  }
   print_triangle(nlevels);
     return 0;
 }
